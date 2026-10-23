@@ -1,38 +1,49 @@
-<section id="about">
+<section id="work">
     <div class="wrap">
-      <div class="section-head reveal"><div><div class="kicker">01 / About</div><h2>Curiosity today. Discovery tomorrow.</h2></div><p class="section-intro">A realistic snapshot of what I’m studying, what I’ve completed, and the questions I’m curious about.</p></div>
-      <div class="about-grid">
+      <div class="section-head reveal"><div><div class="kicker">03 / Work & learning</div><h2>What I’ve completed.</h2></div><p class="section-intro">Only items that can be represented honestly belong here. This section can grow as I complete more coursework and training.</p></div>
+      <div class="two-col">
         <article class="card reveal">
-          <h3>My approach</h3>
-          <p>I’m at the beginning of my scientific journey, building a strong foundation in microbiology and life sciences. I’m learning to connect classroom concepts with scientific thinking, improve my lab knowledge, communicate ideas clearly, and explore how microorganisms shape life on Earth — and what biology might teach us about life beyond it.</p>
-          <div class="tags"><span class="tag">Curiosity first</span><span class="tag">Evidence-led learning</span><span class="tag">Scientific communication</span><span class="tag">Molecular biology</span><span class="tag">Space biology</span></div>
+          <div class="item-top"><div><h3>NASA Open Science</h3><div class="item-type">Completed online learning / certificate</div></div><div class="certificate-mark">✦</div></div>
+          <p>Completed NASA Open Science learning modules covering the principles of open science, including the Use–Make–Share approach, open science data management planning, and FAIR data principles.</p>
+          <div class="tags"><span class="tag">Open science</span><span class="tag">FAIR data</span><span class="tag">Research practices</span></div>
+          <div class="status-line"><span class="dot"></span> Completed · September 19, 2026</div>
+          <div class="actions" style="margin-top:18px"><a class="btn primary" href="NASA_Open_Science_Certificate.pdf" target="_blank" rel="noopener">View NASA certificate ↗️</a><a class="btn" href="NASA_Open_Science_Certificate.pdf" download>Download PDF ↓</a></div>
         </article>
         <article class="card reveal">
-          <div class="fact-list">
-            <div class="fact"><span>Current programme</span><span>B.Sc. Microbiology<br>(Honours with Research)</span></div>
-            <div class="fact"><span>Institution</span><span>Lovely Professional University</span></div>
-            <div class="fact"><span>Stage</span><span>First year · 2026</span></div>
-            <div class="fact"><span>Based in</span><span>India</span></div>
-          </div>
+          <div class="item-top"><div><h3>Scientific learning notes</h3><div class="item-type">Ongoing personal learning</div></div><div class="certificate-mark">✎</div></div>
+          <p>I’m developing my understanding of microbiology and related life-science topics through coursework, revision, and short-form scientific explanations. This is a learning activity, not a published research project.</p>
+          <div class="tags"><span class="tag">Concept building</span><span class="tag">Study notes</span><span class="tag">Communication</span></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="academics">
+  <section id="contact">
     <div class="wrap">
-      <div class="section-head reveal"><div><div class="kicker">02 / Academics</div><h2>Building the foundations.</h2></div><p class="section-intro">My current focus is on learning the concepts and methods that underpin microbiology and molecular life sciences.</p></div>
-      <div class="two-col">
-        <article class="card reveal">
-          <div class="item-top"><div><h3>B.Sc. Microbiology</h3><div class="item-type">Honours with Research · Undergraduate</div></div><div class="certificate-mark">⌬</div></div>
-          <p>Lovely Professional University · 2026–2030</p>
-          <div class="tags"><span class="tag">Microbiology</span><span class="tag">Cell & Molecular Biology</span><span class="tag">Biochemistry</span></div>
-        </article>
-        <article class="card reveal">
-          <div class="item-top"><div><h3>Learning priorities</h3><div class="item-type">Current academic development</div></div><div class="certificate-mark">↗️</div></div>
-          <p>Developing a stronger grasp of microbial diversity, cell structure, molecular processes, lab concepts, bioinformatics fundamentals, and clear scientific writing.</p>
-          <div class="tags"><span class="tag">Core concepts</span><span class="tag">Lab learning</span><span class="tag">Bioinformatics</span><span class="tag">Scientific writing</span></div>
-        </article>
+      <div class="contact-box reveal">
+        <div><div class="kicker">05 / Contact</div><h2>Let’s connect around science.</h2><p>For academic conversations, learning opportunities, or collaboration at an appropriate student level, feel free to email me.</p><div class="micro">EMAIL · shivangpratapsingh75@gmail.com</div></div>
+        <a class="btn primary" href="mailto:shivangpratapsingh75@gmail.com?subject=Hello%20Shivang">Email me ↗️</a>
       </div>
     </div>
   </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© 2026 Shivang Pratap Singh</span><span>Made with curiosity, not claims.</span></div></footer>
+<script>
+  const menu = document.querySelector('.menu');
+  const links = document.querySelector('.nav-links');
+  menu.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); menu.setAttribute('aria-expanded','false');
+  }));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
